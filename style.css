@@ -1,0 +1,93 @@
+:root{
+  --primary: #01141f;
+  --yellow: #f2a70c;
+  --sender: #06463d;
+  --receiver: #212e36;
+}
+@media screen and (max-width: 778px) {
+  .chat-app{
+    max-width: 80%
+  }
+  input[type='submit'] {
+  margin-top: 7px;
+  width: 100%!important;
+  }
+  input[type='text'] {
+   
+    width: 94%!important;
+    }
+}
+@media screen and (min-width: 778px) {
+  .chat-app{
+    max-width: 40%
+  }
+
+}
+.chat-app{
+  background: url(bg.webp);
+  background-size:contain ;
+  color: var(--yellow);
+  width: 100%;
+  position: absolute;
+  left: 5%;
+  padding: 20px;
+  border: 5px double var(--yellow);
+}
+
+#messagesDiv{
+  height: 590px;
+  overflow: auto;
+  padding-bottom: 40px;
+}
+em{
+  text-transform: capitalize;
+  margin-right: 5px;
+}
+.hide{
+  display: none;
+}
+.text-msg{
+font-size: 15px;
+    width: 80%;
+    margin-bottom: 5px;
+    background: var(--receiver);
+padding: 10px;
+color: #ddd;
+border-radius: 17px 0px 0px 0px;
+}
+.text-name{
+  font-size: 10px;
+  max-width: 15%;
+  width: 15%;
+  display: block;
+  color: #fff;
+}
+.self-name{
+  font-size: 0px;
+  max-width: 0%;
+  width: 0%;
+  display: inline-block;
+  color: #fff;
+}
+input[type='text']{
+  padding: 10px;
+  width: 70%;
+  border-radius: 5px;
+}
+input[type='submit'] {
+  background: var(--yellow);
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100px;
+  font-weight: 700;
+}
+
+.self-msg{
+  background: var(--sender);
+padding: 10px;
+color: #ddd;
+border-radius: 0px 0px 17px 0px;
+margin-left: 10%;
+width: 80%;
+}

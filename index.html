@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="style.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+    
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB9VoWAKQ9NNhcPAb3Y54xGkgVcn3fdmlc",
+    authDomain: "webchat-89567.firebaseapp.com",
+    databaseURL: "https://webchat-89567-default-rtdb.firebaseio.com",
+    projectId: "webchat-89567",
+    storageBucket: "webchat-89567.appspot.com",
+    messagingSenderId: "612276865538",
+    appId: "1:612276865538:web:d18422bbbd7b0ed49a351b"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+  </head>
+  <body>
+    <div class="chat-app">
+    <div id='messagesDiv'></div>
+    <div class="button-input">
+      <input type='text' id='nameInput' class="name" placeholder='Enter Your Name To Chat'>
+      <input type="submit" id="namesubmit" value="Add Name">
+      <input type='text' id='messageInput' placeholder='Enter Message... ' class="hide">
+      <input type="submit" id="msgsubmit" class="hide"></div>
+    
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
