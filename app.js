@@ -57,7 +57,7 @@ var myDataRef = firebase.database().ref('chat');
            
             var name = getCookie("name");
             var text = $('#messageInput').val();
-           var time= new Date().getTime();
+           var time= new Date().getHours()+":"+new Date().getMinutes();
             myDataRef.push({
                 name: name,
                 text: text,
@@ -71,13 +71,13 @@ var myDataRef = firebase.database().ref('chat');
       myDataRef.on('child_added', function(chatting) {
         var message = chatting.val();
         
-        displayChatMessage(message.name, message.text);
+        displayChatMessage(message.name, message.text,message.time);
       });
     
       
-      function displayChatMessage(name, text) {
+      function displayChatMessage(name, text,time) {
         
-        $('<div/>').text(text).addClass("text-msg "+ name).prepend($('<em/>').text('~'+name).addClass("text-name "+ name)).appendTo($('#messagesDiv'));
+        $('<div/>').addClass("text-msg "+ name).prepend($('<span/>').text(time).addClass("time")).prepend($('<p/>').text(text).addClass("p-msg")).prepend($('<em/>').text('~'+name).addClass("text-name "+ name)).appendTo($('#messagesDiv'));
        
        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
         var findedname=getCookie("name");
