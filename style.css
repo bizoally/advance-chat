@@ -51,16 +51,14 @@ font-size: 15px;
     width: 80%;
     margin-bottom: 5px;
     background: var(--receiver);
-padding: 10px;
+padding: 1px;
 color: #ddd;
 border-radius: 17px 0px 0px 0px;
 }
 .text-name{
   font-size: 10px;
-  max-width: 15%;
-  width: 15%;
-  display: block;
   color: #fff;
+  margin-left: 10px;
 }
 .self-name{
   font-size: 0px;
@@ -90,4 +88,17 @@ color: #ddd;
 border-radius: 0px 0px 17px 0px;
 margin-left: 10%;
 width: 80%;
+}
+
+.time {
+  font-size: 9px;
+  text-align: right;
+  width: 100%;
+  max-width: 100%;
+  margin-left: -5px;
+  display: inline-block;
+}
+.p-msg{
+  margin:1px;
+  margin-left: 15px;
 }
